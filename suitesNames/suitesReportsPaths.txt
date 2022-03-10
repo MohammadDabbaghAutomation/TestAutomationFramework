@@ -1,0 +1,2 @@
+smokeSuite:/test-output/capital_bank_ui_smokegNnYNMtKBOteTISe.html
+apiSuite:null
