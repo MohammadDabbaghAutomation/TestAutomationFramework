@@ -232,19 +232,19 @@
               <suiteXmlFiles>
               
               
-              <!-- Preconditions Always to be run 
+              <!-- Preconditions Always to be run -->
               
-              <suiteXmlFile>src/test/java/preconditions/preconditions.xml</suiteXmlFile>-->
+              <suiteXmlFile>src/test/java/preconditions/preconditions.xml</suiteXmlFile>
 
-                <!-- Selenium suites 
-                <suiteXmlFile>src/test/java/capital_UI_Smoke/smokeTestNG.xml</suiteXmlFile>-->
+                <!-- Selenium suites -->
+                <suiteXmlFile>src/test/java/capital_UI_Smoke/smokeTestNG.xml</suiteXmlFile>
 
-                <!-- RESTAssured suites 
-                <suiteXmlFile>src/test/java/APIs_Test/Tavel_insurance/travelInsurance.xml</suiteXmlFile>-->
+                <!-- RESTAssured suites -->
+                <suiteXmlFile>src/test/java/APIs_Test/Tavel_insurance/travelInsurance.xml</suiteXmlFile>
                 
                 
-                <!-- Reporting Function / To be run separately after test executions -->
-                <suiteXmlFile> src/test/java/reportingFunction/reportingFunction.xml </suiteXmlFile>
+                <!-- Reporting Function / To be run separately after test executions 
+                <suiteXmlFile> src/test/java/reportingFunction/reportingFunction.xml </suiteXmlFile> -->
 
               </suiteXmlFiles>
             

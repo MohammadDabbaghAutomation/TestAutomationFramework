@@ -16,6 +16,10 @@ On pom file within the <suiteXmlFiles> we put the location of the reporting func
 that tells that the execution will be done in 2 shots instead of one, the first shot you have to comment the reporting function tag and keep the test suites, and once the test suites
 execution is done then we comment the test suites and uncomment the reporting function, we we do that because the reporting function takes the results from 2 sources
 TestNG report and jUnit reports.
+
+In order to get everything executed properly there's a preconditions class it's intended for the reporting and managing reports paths for each suite, it's also created as 
+a suite and it has  an xml file and referred to on pom file, so on pom file it should be uncommented always while running test suites and it should be commented along with
+all test suites while running the reporting function.
   
 The framework has a class called CostomKeywords, it's the class that contains all common functions that are most propably pure java code, like handling datepicker,
 generating random values, reading from sheets functions, waiting functions and so on.
