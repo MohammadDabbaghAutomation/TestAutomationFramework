@@ -1,0 +1,13 @@
+reportingFunction/reportingFunction$1.class
+capital_UI_Smoke/SmokeSuite.class
+APIs_Test/Tavel_insurance/getCustomerInfo.class
+preconditions/preconditions.class
+APIs_Test/Tavel_insurance/postJsonScheme.class
+reportingFunction/reportingFunction.class
+APIs_Test/Tavel_insurance/postCreatePolicy.class
+capital_UI_Smoke/login.class
+APIs_Test/Tavel_insurance/travelInsuranceSuite.class
+APIs_Test/Tavel_insurance/patchJsonScheme.class
+APIs_Test/Tavel_insurance/deleteJsonScheme.class
+APIs_Test/Tavel_insurance/getJsonScheme.class
+APIs_Test/Tavel_insurance/postrequestPolicyQuotation.class

@@ -17,6 +17,7 @@ public class chromeDriver {
 		 ChromeOptions options = new ChromeOptions();
 	     options.addArguments("--start-maximize");
 	     options.addArguments("enable-automation");
+	     options.addArguments("--disable-blink-features=AutomationControlled");
 	     //options.addArguments("--incognito");
 	   
 	     

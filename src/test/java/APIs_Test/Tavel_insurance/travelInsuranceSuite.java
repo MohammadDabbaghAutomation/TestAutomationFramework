@@ -90,32 +90,62 @@ public class travelInsuranceSuite {
    postrequestPolicyQuotation postrequestpolicyquotation = new postrequestPolicyQuotation();
    
    postCreatePolicy createpolicy = new postCreatePolicy();
-   
+
+    getJsonScheme getjsonsheme = new getJsonScheme();
+
+    postJsonScheme postjsonscheme = new postJsonScheme();
+
+    patchJsonScheme patchjsonscheme = new patchJsonScheme();
+
+    deleteJsonScheme deletejsonscheme = new deleteJsonScheme();
 
    /////////////////// Test cases list starts here///////////////////////////////////
    
-   
+/*
    @Test (priority = 0)
    public void customer_info_tc() throws InterruptedException, IOException{
 	   test = extent.createTest("Get Customer Information");
 	   getcustomerinfo.get_customer_info();
    }
-   
+
    @Test (priority = 1)
    public void request_policy_quotation() throws InterruptedException, IOException{
 	   
 	   test = extent.createTest("Post Request Policy Quotation");
 	   postrequestpolicyquotation.post_request_policy_quotation();
    }
-   
+
   @Test (priority = 2)
    public void create_policy() throws InterruptedException, IOException{
 	   test = extent.createTest("Post Create Policy");
 	   createpolicy.post_create_policy();
 	   
-   } 
-  
-   
+   }
+*/
+   @Test(priority= 3)
+   public void get_json_scheme() throws InterruptedException, IOException {
+       test = extent.createTest("get Json Scheme");
+       getjsonsheme.get_Json_Scheme();
+   }
+
+//    @Test(priority= 4)
+//    public void post_json_scheme() throws InterruptedException, IOException {
+//        test = extent.createTest("post Json Scheme");
+//        postjsonscheme.post_Json_Scheme();
+//    }
+
+//    @Test(priority= 5)
+//    public void patch_json_scheme() throws InterruptedException, IOException {
+//        test = extent.createTest("patch Json Scheme");
+//        patchjsonscheme.patch_Json_Scheme();
+//    }
+//
+//    @Test(priority= 6)
+//    public void delete_json_scheme() throws InterruptedException, IOException {
+//        test = extent.createTest("delete Json Scheme");
+//        deletejsonscheme.delete_Json_Scheme();
+//    }
+
    
    // After test cases running is done 
    
@@ -158,22 +188,26 @@ public class travelInsuranceSuite {
        public void aftersuite() throws IOException {
     	   
     	   APIGlobalVariable.travelInsurance_Report_Path = ReportName_with_path;
+    	  
     	   if(GlobalVariable.OS_Name.equalsIgnoreCase("Windows")) {
-    	   APIGlobalVariable.travelInsurance_JUnitReport_Path = "\\target\\surefire-reports\\junitreports\\TEST-APIs_Test.Tavel_insurance.travelInsuranceSuite";
+    	   APIGlobalVariable.travelInsurance_JUnitReport_Path = "\\target\\surefire-reports\\junitreports\\TEST-APIs_Test.Tavel_insurance.travelInsuranceSuite.xml";
     	   }else {
-        	   APIGlobalVariable.travelInsurance_JUnitReport_Path = "//target//surefire-reports//junitreports//TEST-APIs_Test.Tavel_insurance.travelInsuranceSuite";
+        	   APIGlobalVariable.travelInsurance_JUnitReport_Path = "//target//surefire-reports//junitreports//TEST-APIs_Test.Tavel_insurance.travelInsuranceSuite.xml";
 
     	   }
     	   
     	// Calling the method which replacing the null value by the path value
-       	String userDirectory = System.getProperty("user.dir");
+       	/*String userDirectory = System.getProperty("user.dir");
        	
        	if(GlobalVariable.OS_Name.equals("macOS")){
-       		CustomKeywords.replacing_all_suites_names_value(userDirectory+"//suitesNames//suitesReportsPaths.txt", "apiSuite", ReportName_with_path);
+       		CustomKeywords.replacing_all_suites_names_value(userDirectory+"//suitesNames//travelInsurance.txt", "travelInsurance", ReportName_with_path);
        	}else {
-       		CustomKeywords.replacing_all_suites_names_value(userDirectory+"\\suitesNames\\suitesReportsPaths.txt", "apiSuite", ReportName_with_path);
+       		CustomKeywords.replacing_all_suites_names_value(userDirectory+"\\suitesNames\\travelInsurance.txt", "travelInsurance", ReportName_with_path);
        		
-       	}
+       	}*/
+    	   
+    	   capital.capital.CustomKeywords.replacing_all_suites_names_value_excel("travelInsurance", ReportName_with_path);
+    	   
     	   
        }
    

@@ -1,7 +1,11 @@
+/Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/postJsonScheme.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/travelInsuranceSuite.java
+/Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/patchJsonScheme.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/postrequestPolicyQuotation.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/capital_UI_Smoke/SmokeSuite.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/getCustomerInfo.java
+/Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/deleteJsonScheme.java
+/Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/APIs_Test/Tavel_insurance/getJsonScheme.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/reportingFunction/reportingFunction.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/preconditions/preconditions.java
 /Users/mohammaddabbagh/eclipse-workspace/capital/src/test/java/capital_UI_Smoke/login.java

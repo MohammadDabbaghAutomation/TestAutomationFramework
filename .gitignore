@@ -1,0 +1,15 @@
+# IntelliJ
+.idea/
+
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# Taken Screenshots
+FailedTestsScreenshots/
