@@ -86,7 +86,7 @@ public class reportingFunction extends capital.capital.App{
 	 
 						protected PasswordAuthentication getPasswordAuthentication() {
 	 
-							return new PasswordAuthentication("mohammad.d@sitech.me", "MM19910616.2017");
+							return new PasswordAuthentication("sender Email goes here", "password goes here");
 	 
 						}
 	 
@@ -101,7 +101,7 @@ public class reportingFunction extends capital.capital.App{
 				message.setFrom(new InternetAddress("mohammad.d@sitech.me"));
 	 
 				// Set the recipient address
-				message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("mdabbagh.mis@gmail.com"));
+				message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("Recipient Email address"));
 				
 				////////////////// Gmail properties end here ////////////////////
 				
