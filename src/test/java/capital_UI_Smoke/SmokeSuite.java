@@ -167,7 +167,7 @@ public class SmokeSuite extends capital.capital.App{
     public static void resetGlobalVariables() {
     	
     	GlobalVariable.browserName = null;
-    	GlobalVariable.OS_Name = null;
+    	//GlobalVariable.OS_Name = null;
     	
     }
     
@@ -205,7 +205,7 @@ public class SmokeSuite extends capital.capital.App{
     // Assigning the reports' final paths to reports' global variables
     @AfterSuite
     public void aftersuite() throws IOException {
-    
+    	
     	GlobalVariable.smoke_suite_Report_Path = ReportName_with_path;
     	
     	if(GlobalVariable.OS_Name.equalsIgnoreCase("Windows")) {
@@ -215,14 +215,16 @@ public class SmokeSuite extends capital.capital.App{
     	}
     	
     	// Calling the method which replacing the null value by the path value
-    	String userDirectory = System.getProperty("user.dir");
+    	/*String userDirectory = System.getProperty("user.dir");
     	
     	if(GlobalVariable.OS_Name.equals("macOS")){
     	CustomKeywords.replacing_all_suites_names_value(userDirectory+"//suitesNames//suitesReportsPaths.txt", "smokeSuite", ReportName_with_path);
     	}else {
         	CustomKeywords.replacing_all_suites_names_value(userDirectory+"\\suitesNames\\suitesReportsPaths.txt", "smokeSuite", ReportName_with_path);
 
-    	}
+    	}*/
+    	
+    	CustomKeywords.replacing_all_suites_names_value_excel("smokeSuite", ReportName_with_path);
     	
     }
 	

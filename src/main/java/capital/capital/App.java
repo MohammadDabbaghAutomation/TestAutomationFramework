@@ -27,7 +27,7 @@ import java.lang.reflect.Method;
 public class App {
 	
 	public static WebDriver driver;
-		
+
 	public JavascriptExecutor js;
 	
 	public Actions action;

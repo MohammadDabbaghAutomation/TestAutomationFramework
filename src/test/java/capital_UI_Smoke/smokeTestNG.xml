@@ -8,7 +8,7 @@
 <!-- Parameters go here -->
 
 <parameter name="OS" value="macOS"/> <!--Choose the desired Operating system: Windows, macOS, or Linux -->
-<parameter name="browser" value="Safari"/> <!--Choose the desired driver: Chrome, Edge, Firefox, or Safari -->
+<parameter name="browser" value="Chrome"/> <!--Choose the desired driver: Chrome, Edge, Firefox, or Safari -->
 
 <parameter name="environment" value="dev"/> <!-- Choose from dev, qa, stg, prod -->
 <parameter name="credentials" value="testUser"/> <!-- Choose from testUser, testUser2, testUser3 -->

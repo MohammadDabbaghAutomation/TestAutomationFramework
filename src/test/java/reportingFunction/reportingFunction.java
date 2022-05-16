@@ -66,7 +66,7 @@ public class reportingFunction extends capital.capital.App{
 			props.put("mail.smtp.host", "smtp.gmail.com");
 	 
 			// set the port of socket factory 
-			props.put("mail.smtp.socketFactory.port", "465");
+			props.put("mail.smtp.socketFactory.port", "587"); // 587 for TLS  OR  465 for SSL
 				 
 			// set socket factory
 			props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
@@ -75,9 +75,9 @@ public class reportingFunction extends capital.capital.App{
 			props.put("mail.smtp.auth", "true");
 				 
 			// set the port of SMTP server
-			props.put("mail.smtp.port", "465"); //465
+			props.put("mail.smtp.port", "587"); //465
 						
-			props.put("mail.smtp.starttls.enable", true);
+			props.put("mail.smtp.starttls.enable", true);  // true
 	 
 			// This will handle the complete authentication
 			Session session = Session.getDefaultInstance(props,
@@ -98,25 +98,31 @@ public class reportingFunction extends capital.capital.App{
 				Message message = new MimeMessage(session);
 	 
 				// Set the from address
-				message.setFrom(new InternetAddress("from email goes here "));
+				message.setFrom(new InternetAddress("mohammad.d@sitech.me"));
 	 
 				// Set the recipient address
-				message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("Recipients emails go here"));
+				message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("Recipient Email address"));
 				
 				////////////////// Gmail properties end here ////////////////////
 				
 				
 				// Setting GlobalVariables of Reports' Paths
 				String userDirectory = System.getProperty("user.dir");
-				
+				/*
 				if(GlobalVariable.OS_Name.equalsIgnoreCase("macOS")) {
 				GlobalVariable.smoke_suite_Report_Path = CustomKeywords.setting_GBs_suites_pathes(userDirectory+"//suitesNames//suitesReportsPaths.txt", "smokeSuite");
-				APIGlobalVariable.travelInsurance_Report_Path = CustomKeywords.setting_GBs_suites_pathes(userDirectory+"//suitesNames//suitesReportsPaths.txt", "apiSuite");
+				APIGlobalVariable.travelInsurance_Report_Path = CustomKeywords.setting_GBs_suites_pathes(userDirectory+"//suitesNames//travelInsurance.txt", "apiSuite");
 				}else {
 					GlobalVariable.smoke_suite_Report_Path = CustomKeywords.setting_GBs_suites_pathes(userDirectory+"\\suitesNames\\suitesReportsPaths.txt", "smokeSuite");
-					APIGlobalVariable.travelInsurance_Report_Path = CustomKeywords.setting_GBs_suites_pathes(userDirectory+"\\suitesNames\\suitesReportsPaths.txt", "apiSuite");
-				}
+					APIGlobalVariable.travelInsurance_Report_Path = CustomKeywords.setting_GBs_suites_pathes(userDirectory+"\\suitesNames\\travelInsurance.txt", "apiSuite");
+				}*/
+				
+				
+				GlobalVariable.smoke_suite_Report_Path = CustomKeywords.setting_GBs_suites_paths_excel("smokeSuite");
+				APIGlobalVariable.travelInsurance_Report_Path = CustomKeywords.setting_GBs_suites_paths_excel("travelInsurance");
 		 
+				
+				
 				// Mention the file which you want to send
 				
 				String SS = userDirectory + GlobalVariable.smoke_suite_Report_Path;
@@ -140,10 +146,10 @@ public class reportingFunction extends capital.capital.App{
 				// Add the subject link
 				message.setSubject("Capital Bank Automation Test Report");
 				
-				Multipart multipart = new MimeMultipart();
+				//Multipart multipart = new MimeMultipart();
 				
 				BodyPart messageBodyPart2 = new MimeBodyPart();
-			
+				BodyPart messageBodyPart3 = new MimeBodyPart();
 				
 				if(!GlobalVariable.smoke_suite_Report_Path.equals("null")) {
 				
@@ -165,12 +171,35 @@ public class reportingFunction extends capital.capital.App{
 					
 				}
 				
+				if(!APIGlobalVariable.travelInsurance_Report_Path.equals("null")) {
+					
+					// The code of uploading the html report on drive goes here with the use of reportURL_SS
+					// reportURL_SS will hold the report url from drive 
+					
+					// Mention the file which you want to send
+					
+					//Create another object to add another content
+					
+					// Create data source and pass the filename
+					DataSource source = new FileDataSource(apiS);
+					// set the handler
+					messageBodyPart3.setDataHandler(new DataHandler(source));
+		 
+					// set the file
+					messageBodyPart3.setFileName(apiS);
+					
+					
+				}
+				
+				
+				
 				// Create object to add multimedia type content
 				BodyPart messageBodyPart = new MimeBodyPart();
 				
 				// add body part 1
-				multipart.addBodyPart(messageBodyPart2);
-				
+//				Multipart multipart = new MimeMultipart();
+//				multipart.addBodyPart(messageBodyPart2);
+//				multipart.addBodyPart(messageBodyPart3);
 				
 				
 				// Collecting suites' results go here
@@ -239,11 +268,17 @@ public class reportingFunction extends capital.capital.App{
 				  		+ "				</body>";
 				 
 				 messageBodyPart.setContent("<p>Dears,</p>\r\n"+"<p>Here're automation test results of capital bank for your kind perusal.</p>\r\n"+html_fixed_values+html_dynamic_values+html_end_of_table+ "<p>Best regards,</p>"+"<p>SiTech Test Automation Team</p>", "text/html");
-					multipart.addBodyPart(messageBodyPart);
+
+				 Multipart multipart = new MimeMultipart();
+				 multipart.addBodyPart(messageBodyPart2);
+				 //multipart.addBodyPart(messageBodyPart3);
+				 multipart.addBodyPart(messageBodyPart);
+
 					
 					
 					// set the content
-					message.setContent(multipart);
+				message.setContent(multipart);
+
 									 
 					
 					// finally send the email

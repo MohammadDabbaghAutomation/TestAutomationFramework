@@ -20,20 +20,30 @@ public class preconditions {
 		GlobalVariable.OS_Name = OS;
 		
 		CustomKeywords CustomKeywords = new CustomKeywords();
-		
+
+		/*
 		String userDirectory = System.getProperty("user.dir");
-		
+
 		if(GlobalVariable.OS_Name.equalsIgnoreCase("Windows")) {
 			
 			CustomKeywords.resetting_all_suites_names(userDirectory+"\\suitesNames\\suitesReportsPaths.txt", "smokeSuite");
+			CustomKeywords.resetting_all_suites_names(userDirectory+"\\suitesNames\\travelInsurance.txt", "travelInsurance");
 			
 		}else {
 			if(GlobalVariable.OS_Name.equalsIgnoreCase("macOS")) {
 				
 				CustomKeywords.resetting_all_suites_names(userDirectory+"//suitesNames//suitesReportsPaths.txt", "smokeSuite");
+				CustomKeywords.resetting_all_suites_names(userDirectory+"//suitesNames//travelInsurance.txt", "travelInsurance");
 				
 			}
-		}
+		}*/
+
+		CustomKeywords.resetting_all_suites_names_excel("smokeSuite");
+		CustomKeywords.resetting_all_suites_names_excel("travelInsurance");
+
+
+
+
 		
 	}
 

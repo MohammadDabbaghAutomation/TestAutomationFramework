@@ -15,7 +15,7 @@
 
 		<link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>Capital Bank Automation Test</title>
+	<title>REST Assured API Test</title>
 
 	<style type='text/css'>
 			.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}  .card-panel.environment  th:first-child{ width:30%;}
@@ -38,7 +38,7 @@
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>UI Smoke Suite</span>
+		<span class='report-name'>Travel Insurance Suite</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Thursday, March 10, 2022, 09:32 PM (EET)</span>
+                    <span class='label suite-start-time blue darken-3'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
 				</a>
 			</li>
 			<li>
@@ -123,7 +123,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -138,7 +138,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -158,15 +158,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Login</span>
-						<span class='test-time'>Thursday, March 10, 2022, 09:32 PM (EET)</span>
+						<span class='test-name'>patch Json Scheme</span>
+						<span class='test-time'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Thursday, March 10, 2022, 09:32 PM (EET)</span>
-	<span class='label end-time'>Thursday, March 10, 2022, 09:32 PM (EET)</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+961ms</span>
+	<span class='label start-time'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
+	<span class='label end-time'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+363ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -180,8 +180,73 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:32:39 PM</td>
-					<td class='step-details'><span class='label white-text green'>login_test PASSED </span></td>
+					<td class='timestamp'>3:31:37 AM</td>
+					<td class='step-details'><span class='label white-text green'>patch_json_scheme PASSED </span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:37 AM</td>
+					<td class='step-details'><textarea disabled class='code-block'>Request Body
+{"firstName":"Robert","lastName":"Downey Jr.","subjectId":1}</textarea></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:37 AM</td>
+					<td class='step-details'><textarea disabled class='code-block'>Response Body
+{
+    "firstName": "Robert",
+    "lastName": "Downey Jr.",
+    "subjectId": 1,
+    "id": 7
+}</textarea></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>delete Json Scheme</span>
+						<span class='test-time'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
+	<span class='label end-time'>Monday, April 04, 2022, 03:31 AM (EEST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+106ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:37 AM</td>
+					<td class='step-details'><span class='label white-text green'>delete_json_scheme PASSED </span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:37 AM</td>
+					<td class='step-details'><textarea disabled class='code-block'>Request Body
+null</textarea></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:37 AM</td>
+					<td class='step-details'><textarea disabled class='code-block'>Response Body
+{
+    
+}</textarea></td>
 				</tr>
 			</tbody>
 		</table>
@@ -223,51 +288,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Thursday, March 10, 2022, 09:32 PM (EET)</div>
+					<div class='panel-lead'>Monday, April 04, 2022, 03:31 AM (EEST)</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Thursday, March 10, 2022, 09:32 PM (EET)</div>
+			 		<div class='panel-lead'>Monday, April 04, 2022, 03:31 AM (EEST)</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 6s+48ms</div>
-				</div>
-			</div>
-			<div class='col s4'>
-				<div class='card-panel dashboard-environment'>
-					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Value</th>
-						</tr>
-							<tr>
-								<td>OS</td>
-								<td>macOS</td>
-							</tr>
-							<tr>
-								<td>Browser</td>
-								<td>Safari</td>
-							</tr>
-					</table>
+					<div class='panel-lead'>0h 0m 2s+570ms</div>
 				</div>
 			</div>
 		</div>
@@ -280,7 +325,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
+				passParent: 2,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -288,7 +333,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 6,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,

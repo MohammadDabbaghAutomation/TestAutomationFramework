@@ -1,7 +1,10 @@
 package capital.capital;
 
 public class GlobalVariable {
-	
+
+	private GlobalVariable(){
+
+	}
 
 	public static String browserName = null;
 	

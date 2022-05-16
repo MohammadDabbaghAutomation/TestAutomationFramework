@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <parameter name="OS" value="param-val-not-found"/>
-  <parameter name="browser" value="param-val-not-found"/>
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="capital_UI_Smoke.SmokeSuite">
         <methods>
+          <include name="tearDown"/>
+          <include name="resetGlobalVariables"/>
+          <include name="getResult"/>
           <include name="setUp"/>
           <include name="login_test"/>
+          <include name="aftersuite"/>
+          <include name="startReport"/>
         </methods>
       </class> <!-- capital_UI_Smoke.SmokeSuite -->
     </classes>
