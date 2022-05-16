@@ -2,7 +2,7 @@
 It's a test automation framework incubates both Selenium and REST Assured technologies in Maven/Jave environment for UI and API testing.
 It's a hyprid framework which means it's Keywords driven and Data driven.
 
-## The components that this framework is consisted of are:
+### The components that this framework is consisted of are:
 1. TestNG (data-driven framework)
 2. Selenium (test automation tool for UI testing)
 3. REST Assured (test automation tool for API testing)
