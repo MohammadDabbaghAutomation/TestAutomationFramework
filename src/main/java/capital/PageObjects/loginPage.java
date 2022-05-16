@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.NoSuchElementException;
+import java.util.Optional;
+
 public class loginPage {
 
 	WebDriver driver;
@@ -27,12 +30,14 @@ public class loginPage {
 		return googleSearchField;
 	}
 
+
+	@FindBy(css = "input[title='Search']")
+	private WebElement googleSearchField;
+
 	public void insertTextToSearch(String textToSeach){
 		googleSearchField.sendKeys(textToSeach);
 	}
 
-	@FindBy(css = "input[title='Search']")
-	private WebElement googleSearchField;
 
 	////////
 	@FindBy(css = "input[value='Google Search']")
@@ -41,6 +46,18 @@ public class loginPage {
 	public void clickingOnSearchBtn(){
 		googleSearchButton.click();
 	}
+
+	// This way is to handle verifying non-existing element
+	private Optional<WebElement> webElementName(){
+		try{
+			return Optional.of(driver.findElement(By.cssSelector(".selector")));
+		}catch(NoSuchElementException noElement){
+			return Optional.empty();
+		}
+	}
+
+
+
 
 
 
@@ -70,6 +87,8 @@ public class loginPage {
 	public WebElement getsubmit() {
 		return submit;
 	}
+
+
 	
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
