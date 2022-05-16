@@ -12,4 +12,7 @@ log/
 target/
 
 # Taken Screenshots
-FailedTestsScreenshots
+FailedTestsScreenshots/
+
+# testing results
+test-output/
