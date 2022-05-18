@@ -49,7 +49,7 @@ public class travelInsuranceSuite {
 	   GlobalVariable.OS_Name = OS;
 	   
 	   String reportRename = CustomKeywords.getRandomString(16);
-   	ReportName_with_path = "/test-output/capital_bank_api_travelInsurance"+reportRename+".html";
+   	ReportName_with_path = "/target/capital_bank_api_travelInsurance"+reportRename+".html";
    	
    	
    	// initialize the HtmlReporter

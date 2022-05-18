@@ -98,7 +98,8 @@ public class SmokeSuite extends capital.capital.App{
     public void startReport() {
     	
     	String reportRename = CustomKeywords.getRandomString(16);
-    	ReportName_with_path = "/test-output/capital_bank_ui_smoke"+reportRename+".html";
+    	//ReportName_with_path = "/test-output/capital_bank_ui_smoke"+reportRename+".html";
+        ReportName_with_path = "/target/capital_bank_ui_smoke"+reportRename+".html";
     	
     	// initialize the HtmlReporter
     	htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +ReportName_with_path);
