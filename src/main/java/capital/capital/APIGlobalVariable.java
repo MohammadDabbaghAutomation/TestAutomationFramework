@@ -18,6 +18,8 @@ public class APIGlobalVariable {
 	
 	public static String quotationId = "null";
 
+	public static String ACCESS_TOKEN = "";
+
 
 
 }

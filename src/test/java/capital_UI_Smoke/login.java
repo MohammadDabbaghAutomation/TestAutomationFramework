@@ -14,6 +14,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -26,21 +27,39 @@ import capital.capital.GlobalVariable;
 import capital.PageObjects.loginPage;
 import capital.capital.CustomKeywords;
 
+import javax.swing.*;
+
 public class login {
 	
-	public void log_in(JavascriptExecutor js, WebDriverWait wait) throws InterruptedException, IOException {
+	public void log_in() throws InterruptedException, IOException {
 		
 		// Creating an object for the page class that contains all selectors
 		loginPage login = new loginPage(driver);
 		
 		CustomKeywords CustomKeywords = new CustomKeywords();
-		
-		js = (JavascriptExecutor) driver;
-		
-		wait = new WebDriverWait(driver, 10);
+
 		
 		driver.manage().window().maximize();
-		
+
+		driver.navigate().to(CustomKeywords.navigateto("retailLogin"));
+
+		login.entersUsername(GlobalVariable.userName);
+		login.entersPassword(GlobalVariable.passWord);
+		login.clickingOnSubmit();
+		login.assertingThatUserIsLoggedin();
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//		Thread.sleep(2000);
+//		login.getusername().sendKeys(GlobalVariable.userName);
+//		Thread.sleep(1000);
+//		login.getpassword().sendKeys(GlobalVariable.passWord);
+//		Thread.sleep(1000);
+//		login.getsubmit().click();
+		/////////////////////////////////////////////////////////////////////////////
 		// Homework goes here
 		/*
 		// Navigate to the website
@@ -219,29 +238,16 @@ public class login {
 				
 				Assert.assertTrue(error_message, "The error message of card expiration didn't get thrown");
 	*/
-				
-
-				//driver.navigate().to(CustomKeywords.navigateto("retailLogin"));
-
-		driver.navigate().to("https://www.google.com/?hl=en");
-		Thread.sleep(2000);
-		login.insertTextToSearch("trance music");
-		Thread.sleep(2000);
-		login.clickingOnSearchBtn();
 
 
-//				Thread.sleep(2000);
-//
-//				login.getusername().sendKeys(GlobalVariable.userName);
-//				Thread.sleep(1000);
-//
-//				login.getpassword().sendKeys(GlobalVariable.passWord);
-//
-//				Thread.sleep(1000);
-//
-//				login.getsubmit().click();
+//		driver.navigate().to("https://www.google.com/?hl=en");
+//		Thread.sleep(2000);
+//		login.insertTextToSearch("trance music");
+//		Thread.sleep(2000);
+//		login.clickingOnSearchBtn();
 
-				
+
+
 	}
 	
 

@@ -49,8 +49,8 @@ public class travelInsuranceSuite {
 	   GlobalVariable.OS_Name = OS;
 	   
 	   String reportRename = CustomKeywords.getRandomString(16);
-   	ReportName_with_path = "/target/capital_bank_api_travelInsurance"+reportRename+".html";
-   	
+   	//ReportName_with_path = "/target/capital_bank_api_travelInsurance"+reportRename+".html";
+       ReportName_with_path = "/target/find_orchards_api"+reportRename+".html";
    	
    	// initialize the HtmlReporter
       
@@ -65,7 +65,8 @@ public class travelInsuranceSuite {
        //add content, manage tests etc
        htmlReporter.config().setChartVisibilityOnOpen(true);
        htmlReporter.config().setDocumentTitle("REST Assured API Test");
-       htmlReporter.config().setReportName("Travel Insurance Suite");  // To be changed to the suite name
+       //htmlReporter.config().setReportName("Travel Insurance Suite");  // To be changed to the suite name
+       htmlReporter.config().setReportName("Del Monte APIs suite");  // To be changed to the suite name
        htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
        htmlReporter.config().setTheme(Theme.STANDARD);
        htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
@@ -99,6 +100,8 @@ public class travelInsuranceSuite {
 
     deleteJsonScheme deletejsonscheme = new deleteJsonScheme();
 
+    PostToken postToken = new PostToken();
+
    /////////////////// Test cases list starts here///////////////////////////////////
    
 /*
@@ -122,11 +125,23 @@ public class travelInsuranceSuite {
 	   
    }
 */
-   @Test(priority= 3)
-   public void get_json_scheme() throws InterruptedException, IOException {
-       test = extent.createTest("get Json Scheme");
-       getjsonsheme.get_Json_Scheme();
-   }
+
+
+    @Test(priority= 2)
+    public void post_token() throws InterruptedException, IOException{
+        test = extent.createTest("post API for getting access token");
+        postToken.postToken();
+    }
+    @Test(priority= 3) // To be Removed is only for Del Monte
+    public void get_json_scheme() throws InterruptedException, IOException {
+        test = extent.createTest("get find orchards");
+        getjsonsheme.get_Json_Scheme();
+    }
+//   @Test(priority= 3)
+//   public void get_json_scheme() throws InterruptedException, IOException {
+//       test = extent.createTest("get Json Scheme");
+//       getjsonsheme.get_Json_Scheme();
+//   }
 
 //    @Test(priority= 4)
 //    public void post_json_scheme() throws InterruptedException, IOException {

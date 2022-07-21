@@ -158,7 +158,7 @@ public class SmokeSuite extends capital.capital.App{
     @Test (priority = 0)
     public void login_test() throws InterruptedException, IOException {
     	test = extent.createTest("Login");
-    	login.log_in(js, wait);
+    	login.log_in();
     	
     }
     
