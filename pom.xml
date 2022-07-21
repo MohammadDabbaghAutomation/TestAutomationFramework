@@ -267,10 +267,10 @@
               <suiteXmlFile>src/test/java/preconditions/preconditions.xml</suiteXmlFile>
 
                 <!-- Selenium suites-->
-<!--                <suiteXmlFile>src/test/java/capital_UI_Smoke/smokeTestNG.xml</suiteXmlFile>-->
+                <suiteXmlFile>src/test/java/capital_UI_Smoke/smokeTestNG.xml</suiteXmlFile>
 
                   <!--  RESTAssured suites-->
-                <suiteXmlFile>src/test/java/APIs_Test/Tavel_insurance/travelInsurance.xml</suiteXmlFile>
+<!--                <suiteXmlFile>src/test/java/APIs_Test/Tavel_insurance/travelInsurance.xml</suiteXmlFile>-->
                 
                 
                 

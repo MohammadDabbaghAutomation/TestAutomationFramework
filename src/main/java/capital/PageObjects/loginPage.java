@@ -20,17 +20,23 @@ public class loginPage {
 
 	WebDriver driver;
 
+	WebDriverWait wait;
+
+	JavascriptExecutor js;
+
+
 	public loginPage(WebDriver driver) {
 
 		this.driver = driver;
 
 		PageFactory.initElements(driver, this);
+
+		this.wait = new WebDriverWait(driver, 20L);
+
+		this.js = (JavascriptExecutor) driver;
 		
 	}
 
-	WebDriverWait wait = new WebDriverWait(driver, 20L);
-
-	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 
 
